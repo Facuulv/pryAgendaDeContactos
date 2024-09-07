@@ -23,7 +23,7 @@ namespace pryAgendaDeContactos
         {
             ObjModificar.CargarCategorias(cmbCategorias);
             ObjModificar.CargarCategorias(cmbCategoria);
-            ObjModificar.ListarContactos(dgvContactos);
+            ObjModificar.ListarContactos2(dgvContactos);
             Limpiar();
             Controles();
         }
@@ -120,7 +120,7 @@ namespace pryAgendaDeContactos
                 if (resultado == DialogResult.Yes)
                 {
                     ObjModificar.EliminarContacto(idContacto);
-                    ObjModificar.ListarContactos(dgvContactos);
+                    ObjModificar.ListarContactos2(dgvContactos);
                 }
             }
             else
@@ -129,9 +129,16 @@ namespace pryAgendaDeContactos
             }
         }
 
-        private void frmMyEContactos_FormClosed(object sender, FormClosedEventArgs e)
+        private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            ObjModificar.ListarContactos();
+            Limpiar();
+        }
+
+        private void btnLimpiarTodo_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+            lstContactos.Items.Clear();
+            cmbCategorias.Items.Clear();
         }
     }
 }

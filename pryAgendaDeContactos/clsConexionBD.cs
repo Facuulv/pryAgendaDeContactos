@@ -50,7 +50,7 @@ namespace pryAgendaDeContactos
                 MessageBox.Show(ex.Message);
             }
         }
-        public void ListarContactos(DataGridView dgvContactos)
+        public void ListarContactos2(DataGridView dgvContactos)
         {
             try
             {

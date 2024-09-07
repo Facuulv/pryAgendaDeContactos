@@ -11,19 +11,15 @@ using System.Windows.Forms;
 namespace pryAgendaDeContactos
 {
     public partial class frmAgregarContactos : Form
-    {
-        private frmVentanaPrincipal principal;
-        private TreeView tv;
-        public frmAgregarContactos(frmVentanaPrincipal principal, TreeView tv)
+    {      
+        public frmAgregarContactos()
         {
             InitializeComponent();
-            this.principal = principal;
-            this.tv = tv;
         }
         clsConexionBD Agregar = new clsConexionBD();
         private void frmAgregarContactos_Load(object sender, EventArgs e)
         {
-            Agregar.ListarContactos(dgvContactos);
+            Agregar.ListarContactos2(dgvContactos);
             Agregar.CargarCategorias(cmbCategoria);
             dgvContactos.Columns[0].HeaderText = "Contacto";
             dgvContactos.Columns[5].HeaderText = "Categoría";
@@ -46,10 +42,7 @@ namespace pryAgendaDeContactos
                 int cate = Convert.ToInt32(cmbCategoria.SelectedValue);
                 Agregar.AgregarContacto(nombre, ape, tel, correo, cate);
                 Limpiar();
-                Agregar.ListarContactos(dgvContactos);
-                //principal.ActualizarContactos();
-                //tv.Nodes.Clear();
-                //Agregar.ListarContactos(tv);
+                Agregar.ListarContactos2(dgvContactos);
             }
             else
             {

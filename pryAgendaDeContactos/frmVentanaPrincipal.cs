@@ -20,7 +20,7 @@ namespace pryAgendaDeContactos
 
         private void tsbAgregar_Click(object sender, EventArgs e)
         {
-            frmAgregarContactos Agregar = new frmAgregarContactos(this, tvContactos);
+            frmAgregarContactos Agregar = new frmAgregarContactos();
             Agregar.Show();
         }
 
@@ -73,6 +73,11 @@ namespace pryAgendaDeContactos
         {
             clsConexionBD conexionBD = new clsConexionBD();
             conexionBD.ListarContactos(tvContactos);
-        }      
+        }
+
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            ActualizarContactos();
+        }
     }
 }

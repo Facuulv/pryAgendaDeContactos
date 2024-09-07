@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Contactos");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Nodo1");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Contactos");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Nodo1");
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -147,13 +147,13 @@
             this.tvContactos.HideSelection = false;
             this.tvContactos.Location = new System.Drawing.Point(0, 0);
             this.tvContactos.Name = "tvContactos";
-            treeNode1.Name = "Nodo0";
-            treeNode1.Text = "Contactos";
-            treeNode2.Name = "Nodo1";
-            treeNode2.Text = "Nodo1";
+            treeNode7.Name = "Nodo0";
+            treeNode7.Text = "Contactos";
+            treeNode8.Name = "Nodo1";
+            treeNode8.Text = "Nodo1";
             this.tvContactos.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
+            treeNode7,
+            treeNode8});
             this.tvContactos.ShowNodeToolTips = true;
             this.tvContactos.Size = new System.Drawing.Size(209, 329);
             this.tvContactos.TabIndex = 2;
@@ -381,19 +381,20 @@
             // 
             // btnRefrescar
             // 
-            this.btnRefrescar.Location = new System.Drawing.Point(559, 79);
+            this.btnRefrescar.Location = new System.Drawing.Point(12, 474);
             this.btnRefrescar.Name = "btnRefrescar";
-            this.btnRefrescar.Size = new System.Drawing.Size(75, 30);
+            this.btnRefrescar.Size = new System.Drawing.Size(211, 30);
             this.btnRefrescar.TabIndex = 13;
-            this.btnRefrescar.Text = "Refrescar";
+            this.btnRefrescar.Text = "REFRESCAR ";
             this.btnRefrescar.UseVisualStyleBackColor = true;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // frmVentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(678, 486);
+            this.ClientSize = new System.Drawing.Size(678, 509);
             this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.scContactos);

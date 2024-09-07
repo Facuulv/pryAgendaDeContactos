@@ -140,6 +140,7 @@
             this.btnLimpiarTodo.TabIndex = 12;
             this.btnLimpiarTodo.Text = "Limpiar todo";
             this.btnLimpiarTodo.UseVisualStyleBackColor = true;
+            this.btnLimpiarTodo.Click += new System.EventHandler(this.btnLimpiarTodo_Click);
             // 
             // btnLimpiar
             // 
@@ -150,6 +151,7 @@
             this.btnLimpiar.TabIndex = 11;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnModificar
             // 
@@ -356,7 +358,6 @@
             this.Name = "frmMyEContactos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar y Eliminar Contactos";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMyEContactos_FormClosed);
             this.Load += new System.EventHandler(this.frmMyEContactos_Load);
             this.tcContactos.ResumeLayout(false);
             this.tpModificar.ResumeLayout(false);
