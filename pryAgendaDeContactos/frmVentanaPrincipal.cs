@@ -45,5 +45,29 @@ namespace pryAgendaDeContactos
         {
             ObjPrincipal.ListarContactos(tvContactos);
         }
+
+        private void tvContactos_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            string contactoSelec = e.Node.Text;
+            // Si no esta vacio quiere decir que se selecciono un nodo (contacto)
+            if (!string.IsNullOrEmpty(contactoSelec))
+            {
+                DataTable datosContacto = ObjPrincipal.DatosContacto(contactoSelec);
+
+                if (datosContacto.Rows.Count > 0)
+                {
+                    // Esta es la fila donde tengo todos los datos del contacto selec.
+                    DataRow fila = datosContacto.Rows[0];
+                    lblNombre.Text = fila["Nombre"].ToString();
+                    lblApellido.Text = fila["Apellido"].ToString();
+                    lblTelefono.Text = fila["Telefono"].ToString();
+                    lblCorreo.Text = fila["Correo"].ToString();
+                    lblRelacion.Text = fila["Categoria"].ToString();
+                }else
+                {
+                    MessageBox.Show("No se encontraron datos para el contacto seleccionado.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
     }
 }

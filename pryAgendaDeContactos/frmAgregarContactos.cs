@@ -23,6 +23,9 @@ namespace pryAgendaDeContactos
             Agregar.CargarCategorias(cmbCategoria);
             dgvContactos.Columns[0].HeaderText = "Contacto";
             dgvContactos.Columns[5].HeaderText = "Categoría";
+            dgvContactos.Columns[0].Width = 80;
+            dgvContactos.Columns[4].Width = 140;
+            dgvContactos.Columns[5].Width = 80;
             Limpiar();
         }
 

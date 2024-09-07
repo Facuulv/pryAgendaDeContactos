@@ -101,12 +101,27 @@ namespace pryAgendaDeContactos
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (dgvContactos.SelectedRows.Count > 0)
-            {
+            {                
                 DataGridViewRow filaSelec = dgvContactos.SelectedRows[0];
-                int indice = Convert.ToInt32(filaSelec.Cells["id_Contacto"].Value);
+                int idContacto = Convert.ToInt32(filaSelec.Cells["id_Contacto"].Value);
 
-                ObjModificar.EliminarContacto(indice);
-                ObjModificar.ListarContactos(dgvContactos);
+                // Mensaje para eliminacion, si confirma o no
+                DialogResult resultado = MessageBox.Show(
+                    "¿Está seguro de que desea eliminar este contacto?",
+                    "Confirmar Eliminación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+
+                // Si elige si se elimina
+                if (resultado == DialogResult.Yes)
+                {
+                    ObjModificar.EliminarContacto(idContacto);
+                    ObjModificar.ListarContactos(dgvContactos);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un contacto para eliminar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
