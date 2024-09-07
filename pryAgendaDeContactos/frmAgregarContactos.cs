@@ -12,9 +12,13 @@ namespace pryAgendaDeContactos
 {
     public partial class frmAgregarContactos : Form
     {
-        public frmAgregarContactos()
+        private frmVentanaPrincipal principal;
+        private TreeView tv;
+        public frmAgregarContactos(frmVentanaPrincipal principal, TreeView tv)
         {
             InitializeComponent();
+            this.principal = principal;
+            this.tv = tv;
         }
         clsConexionBD Agregar = new clsConexionBD();
         private void frmAgregarContactos_Load(object sender, EventArgs e)
@@ -43,6 +47,9 @@ namespace pryAgendaDeContactos
                 Agregar.AgregarContacto(nombre, ape, tel, correo, cate);
                 Limpiar();
                 Agregar.ListarContactos(dgvContactos);
+                //principal.ActualizarContactos();
+                //tv.Nodes.Clear();
+                //Agregar.ListarContactos(tv);
             }
             else
             {

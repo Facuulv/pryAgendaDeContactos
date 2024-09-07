@@ -20,7 +20,7 @@ namespace pryAgendaDeContactos
 
         private void tsbAgregar_Click(object sender, EventArgs e)
         {
-            frmAgregarContactos Agregar = new frmAgregarContactos();
+            frmAgregarContactos Agregar = new frmAgregarContactos(this, tvContactos);
             Agregar.Show();
         }
 
@@ -31,7 +31,7 @@ namespace pryAgendaDeContactos
 
         private void tsbMyE_Click(object sender, EventArgs e)
         {
-            frmMyEContactos MyEContactos = new frmMyEContactos();
+            frmMyEContactos MyEContactos = new frmMyEContactos(this);
             MyEContactos.Show();
         }
 
@@ -42,7 +42,7 @@ namespace pryAgendaDeContactos
         }
 
         private void frmVentanaPrincipal_Load(object sender, EventArgs e)
-        {
+        {            
             ObjPrincipal.ListarContactos(tvContactos);
         }
 
@@ -69,5 +69,10 @@ namespace pryAgendaDeContactos
                 }
             }
         }
+        public void ActualizarContactos()
+        {
+            clsConexionBD conexionBD = new clsConexionBD();
+            conexionBD.ListarContactos(tvContactos);
+        }      
     }
 }

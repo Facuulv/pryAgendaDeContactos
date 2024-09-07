@@ -12,9 +12,11 @@ namespace pryAgendaDeContactos
 {
     public partial class frmMyEContactos : Form
     {
-        public frmMyEContactos()
+        private frmVentanaPrincipal principal;
+        public frmMyEContactos(frmVentanaPrincipal principal)
         {
             InitializeComponent();
+            this.principal = principal;
         }
         clsConexionBD ObjModificar = new clsConexionBD();
         private void frmMyEContactos_Load(object sender, EventArgs e)
@@ -77,6 +79,8 @@ namespace pryAgendaDeContactos
 
                 ObjModificar.ModificarContacto(nombre, ape, tel, correo, cate, cod);
                 Limpiar();
+
+                principal.ActualizarContactos();
             }
         }
         private void Limpiar()
@@ -123,6 +127,11 @@ namespace pryAgendaDeContactos
             {
                 MessageBox.Show("Por favor, seleccione un contacto para eliminar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void frmMyEContactos_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ObjModificar.ListarContactos();
         }
     }
 }

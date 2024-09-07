@@ -356,6 +356,7 @@
             this.Name = "frmMyEContactos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar y Eliminar Contactos";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMyEContactos_FormClosed);
             this.Load += new System.EventHandler(this.frmMyEContactos_Load);
             this.tcContactos.ResumeLayout(false);
             this.tpModificar.ResumeLayout(false);

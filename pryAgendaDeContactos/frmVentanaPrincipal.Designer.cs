@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Nodo0");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Contactos");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Nodo1");
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -61,6 +61,7 @@
             this.exportarATXTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pbContacto = new System.Windows.Forms.PictureBox();
+            this.btnRefrescar = new System.Windows.Forms.Button();
             this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scContactos)).BeginInit();
             this.scContactos.Panel1.SuspendLayout();
@@ -141,19 +142,20 @@
             // 
             this.tvContactos.BackColor = System.Drawing.Color.OldLace;
             this.tvContactos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tvContactos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tvContactos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tvContactos.HideSelection = false;
-            this.tvContactos.Location = new System.Drawing.Point(5, 3);
+            this.tvContactos.Location = new System.Drawing.Point(0, 0);
             this.tvContactos.Name = "tvContactos";
             treeNode1.Name = "Nodo0";
-            treeNode1.Text = "Nodo0";
+            treeNode1.Text = "Contactos";
             treeNode2.Name = "Nodo1";
             treeNode2.Text = "Nodo1";
             this.tvContactos.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode1,
             treeNode2});
             this.tvContactos.ShowNodeToolTips = true;
-            this.tvContactos.Size = new System.Drawing.Size(201, 319);
+            this.tvContactos.Size = new System.Drawing.Size(209, 329);
             this.tvContactos.TabIndex = 2;
             this.tvContactos.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvContactos_AfterSelect);
             // 
@@ -182,7 +184,6 @@
             // 
             this.lblRelacion.BackColor = System.Drawing.Color.PeachPuff;
             this.lblRelacion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblRelacion.Enabled = false;
             this.lblRelacion.Location = new System.Drawing.Point(122, 257);
             this.lblRelacion.Name = "lblRelacion";
             this.lblRelacion.Size = new System.Drawing.Size(215, 28);
@@ -192,7 +193,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(23, 258);
+            this.label11.Location = new System.Drawing.Point(23, 263);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(73, 17);
             this.label11.TabIndex = 10;
@@ -202,7 +203,6 @@
             // 
             this.lblCorreo.BackColor = System.Drawing.Color.PeachPuff;
             this.lblCorreo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCorreo.Enabled = false;
             this.lblCorreo.Location = new System.Drawing.Point(122, 202);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(215, 28);
@@ -212,7 +212,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(23, 203);
+            this.label9.Location = new System.Drawing.Point(23, 208);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 17);
             this.label9.TabIndex = 8;
@@ -222,7 +222,6 @@
             // 
             this.lblTelefono.BackColor = System.Drawing.Color.PeachPuff;
             this.lblTelefono.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTelefono.Enabled = false;
             this.lblTelefono.Location = new System.Drawing.Point(122, 147);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(215, 28);
@@ -232,7 +231,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(23, 148);
+            this.label7.Location = new System.Drawing.Point(23, 153);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(75, 17);
             this.label7.TabIndex = 6;
@@ -242,7 +241,6 @@
             // 
             this.lblApellido.BackColor = System.Drawing.Color.PeachPuff;
             this.lblApellido.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblApellido.Enabled = false;
             this.lblApellido.Location = new System.Drawing.Point(204, 92);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(133, 28);
@@ -252,7 +250,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(128, 93);
+            this.label5.Location = new System.Drawing.Point(128, 98);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 17);
             this.label5.TabIndex = 3;
@@ -262,7 +260,6 @@
             // 
             this.lblNombre.BackColor = System.Drawing.Color.PeachPuff;
             this.lblNombre.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblNombre.Enabled = false;
             this.lblNombre.Location = new System.Drawing.Point(204, 38);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(133, 27);
@@ -272,7 +269,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(128, 38);
+            this.label2.Location = new System.Drawing.Point(128, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 17);
             this.label2.TabIndex = 1;
@@ -382,12 +379,22 @@
             this.pbContacto.TabIndex = 0;
             this.pbContacto.TabStop = false;
             // 
+            // btnRefrescar
+            // 
+            this.btnRefrescar.Location = new System.Drawing.Point(559, 79);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(75, 30);
+            this.btnRefrescar.TabIndex = 13;
+            this.btnRefrescar.Text = "Refrescar";
+            this.btnRefrescar.UseVisualStyleBackColor = true;
+            // 
             // frmVentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(678, 486);
+            this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.scContactos);
             this.Controls.Add(this.panel1);
@@ -446,5 +453,6 @@
         private System.Windows.Forms.PictureBox pbContacto;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnRefrescar;
     }
 }
