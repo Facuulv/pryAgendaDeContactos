@@ -30,6 +30,10 @@
         {
             this.dgvContactos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
@@ -38,10 +42,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -80,6 +80,42 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "AGREGAR CONTACTOS";
             // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtCorreo.Location = new System.Drawing.Point(92, 159);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(193, 25);
+            this.txtCorreo.TabIndex = 13;
+            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtTelefono.Location = new System.Drawing.Point(92, 119);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(193, 25);
+            this.txtTelefono.TabIndex = 12;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
+            // 
+            // txtApellido
+            // 
+            this.txtApellido.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtApellido.Location = new System.Drawing.Point(92, 79);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(193, 25);
+            this.txtApellido.TabIndex = 11;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtNombre.Location = new System.Drawing.Point(92, 38);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(193, 25);
+            this.txtNombre.TabIndex = 10;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
+            // 
             // btnAgregar
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -106,6 +142,7 @@
             // 
             // cmbCategoria
             // 
+            this.cmbCategoria.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.Location = new System.Drawing.Point(92, 200);
             this.cmbCategoria.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -167,38 +204,6 @@
             this.label1.Size = new System.Drawing.Size(62, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(92, 38);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(193, 25);
-            this.txtNombre.TabIndex = 10;
-            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
-            // 
-            // txtApellido
-            // 
-            this.txtApellido.Location = new System.Drawing.Point(92, 79);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(193, 25);
-            this.txtApellido.TabIndex = 11;
-            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Location = new System.Drawing.Point(92, 119);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(193, 25);
-            this.txtTelefono.TabIndex = 12;
-            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Location = new System.Drawing.Point(92, 159);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(193, 25);
-            this.txtCorreo.TabIndex = 13;
-            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
             // 
             // frmAgregarContactos
             // 
