@@ -120,6 +120,7 @@
             this.lblIdContacto.Size = new System.Drawing.Size(49, 32);
             this.lblIdContacto.TabIndex = 14;
             this.lblIdContacto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblIdContacto.Visible = false;
             // 
             // pbImagen
             // 
@@ -159,6 +160,7 @@
             this.btnModificar.TabIndex = 10;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // cmbCategoria
             // 
@@ -313,22 +315,24 @@
             this.tpEliminar.BackColor = System.Drawing.Color.OldLace;
             this.tpEliminar.Controls.Add(this.btnEliminar);
             this.tpEliminar.Controls.Add(this.dgvContactos);
-            this.tpEliminar.Location = new System.Drawing.Point(4, 25);
+            this.tpEliminar.Location = new System.Drawing.Point(4, 26);
             this.tpEliminar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tpEliminar.Name = "tpEliminar";
             this.tpEliminar.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tpEliminar.Size = new System.Drawing.Size(562, 346);
+            this.tpEliminar.Size = new System.Drawing.Size(562, 345);
             this.tpEliminar.TabIndex = 1;
             this.tpEliminar.Text = "ELIMINAR CONTACTOS";
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(8, 271);
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(371, 291);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(116, 48);
+            this.btnEliminar.Size = new System.Drawing.Size(184, 48);
             this.btnEliminar.TabIndex = 1;
-            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Text = "ELIMINAR CONTACTO";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // dgvContactos
             // 
@@ -337,7 +341,7 @@
             this.dgvContactos.Name = "dgvContactos";
             this.dgvContactos.ReadOnly = true;
             this.dgvContactos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvContactos.Size = new System.Drawing.Size(547, 245);
+            this.dgvContactos.Size = new System.Drawing.Size(547, 278);
             this.dgvContactos.TabIndex = 0;
             // 
             // frmMyEContactos

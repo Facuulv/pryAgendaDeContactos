@@ -23,8 +23,7 @@ namespace pryAgendaDeContactos
             ObjModificar.CargarCategorias(cmbCategoria);
             ObjModificar.ListarContactos(dgvContactos);
             Limpiar();
-            cmbCategorias.Text = "";
-            lstContactos.Items.Clear();
+            Controles();
         }
 
         private void cmbCategorias_SelectedIndexChanged(object sender, EventArgs e)
@@ -63,6 +62,23 @@ namespace pryAgendaDeContactos
                 }
             }
         }
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (txtNombre.Text != "" && txtApellido.Text != "" &&
+                txtTelefono.Text != null && txtCorreo.Text != "" &&
+                cmbCategoria.SelectedValue != null)
+            {
+                string nombre = txtNombre.Text;
+                string ape = txtApellido.Text;
+                string tel = txtTelefono.Text;
+                string correo = txtCorreo.Text;
+                int cate = Convert.ToInt32(cmbCategoria.SelectedValue);
+                int cod = Convert.ToInt32(lblIdContacto.Text);
+
+                ObjModificar.ModificarContacto(nombre, ape, tel, correo, cate, cod);
+                Limpiar();
+            }
+        }
         private void Limpiar()
         {
             txtNombre.Text = "";
@@ -71,6 +87,27 @@ namespace pryAgendaDeContactos
             txtCorreo.Text = "";
             cmbCategoria.Text = "";
             lblIdContacto.Text = "";
+        }
+        private void Controles()
+        {
+            cmbCategorias.Text = "";
+            lstContactos.Items.Clear();
+            dgvContactos.Columns[0].HeaderText = "ID";
+            dgvContactos.Columns[5].HeaderText = "Categoría";
+            dgvContactos.Columns[0].Width = 50;
+            dgvContactos.Columns[5].Width = 80;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvContactos.SelectedRows.Count > 0)
+            {
+                DataGridViewRow filaSelec = dgvContactos.SelectedRows[0];
+                int indice = Convert.ToInt32(filaSelec.Cells["id_Contacto"].Value);
+
+                ObjModificar.EliminarContacto(indice);
+                ObjModificar.ListarContactos(dgvContactos);
+            }
         }
     }
 }
