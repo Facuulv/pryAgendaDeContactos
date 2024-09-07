@@ -23,6 +23,7 @@ namespace pryAgendaDeContactos
             Agregar.CargarCategorias(cmbCategoria);
             dgvContactos.Columns[0].HeaderText = "Contacto";
             dgvContactos.Columns[5].HeaderText = "Categoría";
+            Limpiar();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -81,6 +82,7 @@ namespace pryAgendaDeContactos
             txtTelefono.Text = "";
             txtCorreo.Text = "";
             cmbCategoria.Text = "";
+            txtNombre.Select();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

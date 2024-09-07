@@ -144,5 +144,20 @@
   <ItemGroup>
     <None Include="Resources\demography_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_circle_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_box_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patient_list_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contacts_product_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
