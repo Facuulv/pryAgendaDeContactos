@@ -292,7 +292,19 @@ namespace pryAgendaDeContactos
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = "SELECT id_Contacto, Nombre, Apellido, Telefono, Correo, id_Categoria FROM Contactos WHERE Nombre = @Nombre";
+                comando.CommandText = @"
+                    SELECT 
+                        contacto.id_Contacto, 
+                        contacto.Nombre, 
+                        contacto.Apellido, 
+                        contacto.Telefono, 
+                        contacto.Correo, 
+                        cate.Categoria 
+                    FROM Contactos AS contacto
+                    INNER JOIN Categorias AS cate
+                    ON contacto.id_Categoria = cate.id_Categoria
+                    WHERE contacto.Nombre = @Nombre";
+
                 comando.Parameters.AddWithValue("@Nombre", nombre);
                 conexion.Open();
 

@@ -45,7 +45,23 @@ namespace pryAgendaDeContactos
 
         private void lstContactos_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (lstContactos.SelectedItem != null)
+            {
+                string contactoSelec = lstContactos.SelectedItem.ToString();
+                // Guardo los datos en una tabla virtualizada
+                DataTable datosContacto = ObjModificar.DatosContacto(contactoSelec);
+                if (datosContacto.Rows.Count > 0)
+                {
+                    //Encontró los datos del contacto
+                    DataRow fila = datosContacto.Rows[0];
+                    txtNombre.Text = fila["Nombre"].ToString();
+                    txtApellido.Text = fila["Apellido"].ToString();
+                    txtTelefono.Text = fila["Telefono"].ToString();
+                    txtCorreo.Text = fila["Correo"].ToString();
+                    cmbCategoria.Text = fila["Categoria"].ToString();
+                    lblIdContacto.Text = fila["id_Contacto"].ToString();
+                }
+            }
         }
         private void Limpiar()
         {
