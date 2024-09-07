@@ -76,7 +76,7 @@
             // 
             // tpModificar
             // 
-            this.tpModificar.BackColor = System.Drawing.Color.OldLace;
+            this.tpModificar.BackColor = System.Drawing.Color.Bisque;
             this.tpModificar.Controls.Add(this.groupBox2);
             this.tpModificar.Controls.Add(this.groupBox1);
             this.tpModificar.Location = new System.Drawing.Point(4, 26);
@@ -314,7 +314,7 @@
             // 
             // tpEliminar
             // 
-            this.tpEliminar.BackColor = System.Drawing.Color.OldLace;
+            this.tpEliminar.BackColor = System.Drawing.Color.Bisque;
             this.tpEliminar.Controls.Add(this.btnEliminar);
             this.tpEliminar.Controls.Add(this.dgvContactos);
             this.tpEliminar.Location = new System.Drawing.Point(4, 26);

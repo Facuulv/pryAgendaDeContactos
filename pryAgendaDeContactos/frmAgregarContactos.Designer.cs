@@ -57,7 +57,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.OldLace;
+            this.groupBox1.BackColor = System.Drawing.Color.Bisque;
             this.groupBox1.Controls.Add(this.txtCorreo);
             this.groupBox1.Controls.Add(this.txtTelefono);
             this.groupBox1.Controls.Add(this.txtApellido);

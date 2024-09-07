@@ -31,18 +31,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lstCategorias = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnQuitar = new System.Windows.Forms.Button();
+            this.pbImagen = new System.Windows.Forms.PictureBox();
             this.btnCategoria = new System.Windows.Forms.Button();
             this.txtCategoria = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pbImagen = new System.Windows.Forms.PictureBox();
-            this.btnQuitar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.OldLace;
+            this.label2.BackColor = System.Drawing.Color.Bisque;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(282, 24);
@@ -64,7 +64,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.OldLace;
+            this.groupBox1.BackColor = System.Drawing.Color.Bisque;
             this.groupBox1.Controls.Add(this.btnQuitar);
             this.groupBox1.Controls.Add(this.pbImagen);
             this.groupBox1.Controls.Add(this.btnCategoria);
@@ -77,6 +77,26 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "AGREGAR CATEGORÍAS";
+            // 
+            // btnQuitar
+            // 
+            this.btnQuitar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitar.Location = new System.Drawing.Point(6, 118);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(134, 34);
+            this.btnQuitar.TabIndex = 4;
+            this.btnQuitar.Text = "QUITAR";
+            this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
+            // 
+            // pbImagen
+            // 
+            this.pbImagen.Image = global::pryAgendaDeContactos.Properties.Resources.library_add_24dp_5F6368_FILL0_wght400_GRAD0_opsz24;
+            this.pbImagen.Location = new System.Drawing.Point(158, 18);
+            this.pbImagen.Name = "pbImagen";
+            this.pbImagen.Size = new System.Drawing.Size(100, 97);
+            this.pbImagen.TabIndex = 3;
+            this.pbImagen.TabStop = false;
             // 
             // btnCategoria
             // 
@@ -105,26 +125,6 @@
             this.label1.Size = new System.Drawing.Size(69, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Categoría:";
-            // 
-            // pbImagen
-            // 
-            this.pbImagen.Image = global::pryAgendaDeContactos.Properties.Resources.library_add_24dp_5F6368_FILL0_wght400_GRAD0_opsz24;
-            this.pbImagen.Location = new System.Drawing.Point(158, 18);
-            this.pbImagen.Name = "pbImagen";
-            this.pbImagen.Size = new System.Drawing.Size(100, 97);
-            this.pbImagen.TabIndex = 3;
-            this.pbImagen.TabStop = false;
-            // 
-            // btnQuitar
-            // 
-            this.btnQuitar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuitar.Location = new System.Drawing.Point(6, 118);
-            this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(134, 34);
-            this.btnQuitar.TabIndex = 4;
-            this.btnQuitar.Text = "QUITAR";
-            this.btnQuitar.UseVisualStyleBackColor = true;
-            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
             // 
             // frmAgregarCategorias
             // 

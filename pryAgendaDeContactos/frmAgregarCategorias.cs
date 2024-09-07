@@ -26,7 +26,9 @@ namespace pryAgendaDeContactos
                 {
                     ObjCategorias.AgregarCategorias(cate);
                     ObjCategorias.ListarCategorias(lstCategorias);
-                    txtCategoria.Text = "";                    
+                    txtCategoria.Text = "";
+                    txtCategoria.Select();
+                    btnQuitar.Enabled = false;
                 }
                 else
                 {
@@ -48,7 +50,7 @@ namespace pryAgendaDeContactos
 
         private void lstCategorias_SelectedIndexChanged(object sender, EventArgs e)
         {
-            btnQuitar.Enabled = lstCategorias.SelectedIndex > 0;
+            btnQuitar.Enabled = lstCategorias.SelectedIndex >= 0;
         }
 
         private void btnQuitar_Click(object sender, EventArgs e)
@@ -62,6 +64,7 @@ namespace pryAgendaDeContactos
                     ObjCategorias.EliminarCategorias(categoriaSelec);
                     ObjCategorias.ListarCategorias(lstCategorias);
                     btnQuitar.Enabled = false;
+                    txtCategoria.Select();
                 }
             }
             else
