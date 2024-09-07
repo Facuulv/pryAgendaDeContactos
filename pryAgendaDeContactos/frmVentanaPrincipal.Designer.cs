@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Contactos");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Nodo1");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Contactos");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Nodo1");
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -147,13 +147,13 @@
             this.tvContactos.HideSelection = false;
             this.tvContactos.Location = new System.Drawing.Point(0, 0);
             this.tvContactos.Name = "tvContactos";
-            treeNode7.Name = "Nodo0";
-            treeNode7.Text = "Contactos";
-            treeNode8.Name = "Nodo1";
-            treeNode8.Text = "Nodo1";
+            treeNode13.Name = "Nodo0";
+            treeNode13.Text = "Contactos";
+            treeNode14.Name = "Nodo1";
+            treeNode14.Text = "Nodo1";
             this.tvContactos.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode8});
+            treeNode13,
+            treeNode14});
             this.tvContactos.ShowNodeToolTips = true;
             this.tvContactos.Size = new System.Drawing.Size(209, 329);
             this.tvContactos.TabIndex = 2;
@@ -381,12 +381,15 @@
             // 
             // btnRefrescar
             // 
+            this.btnRefrescar.BackColor = System.Drawing.Color.PeachPuff;
+            this.btnRefrescar.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnRefrescar.FlatAppearance.BorderSize = 2;
             this.btnRefrescar.Location = new System.Drawing.Point(12, 474);
             this.btnRefrescar.Name = "btnRefrescar";
             this.btnRefrescar.Size = new System.Drawing.Size(211, 30);
             this.btnRefrescar.TabIndex = 13;
             this.btnRefrescar.Text = "REFRESCAR ";
-            this.btnRefrescar.UseVisualStyleBackColor = true;
+            this.btnRefrescar.UseVisualStyleBackColor = false;
             this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // frmVentanaPrincipal

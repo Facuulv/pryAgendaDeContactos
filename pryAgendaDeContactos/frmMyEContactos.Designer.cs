@@ -138,7 +138,7 @@
             this.btnLimpiarTodo.Name = "btnLimpiarTodo";
             this.btnLimpiarTodo.Size = new System.Drawing.Size(261, 36);
             this.btnLimpiarTodo.TabIndex = 12;
-            this.btnLimpiarTodo.Text = "Limpiar todo";
+            this.btnLimpiarTodo.Text = "LIMPIAR TODO";
             this.btnLimpiarTodo.UseVisualStyleBackColor = true;
             this.btnLimpiarTodo.Click += new System.EventHandler(this.btnLimpiarTodo_Click);
             // 
@@ -149,7 +149,7 @@
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(125, 36);
             this.btnLimpiar.TabIndex = 11;
-            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.Text = "LIMPIAR";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
@@ -160,7 +160,7 @@
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(125, 36);
             this.btnModificar.TabIndex = 10;
-            this.btnModificar.Text = "Modificar";
+            this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 

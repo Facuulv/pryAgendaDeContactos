@@ -73,6 +73,34 @@ namespace pryAgendaDeContactos
                 MessageBox.Show(ex.Message);
             }
         }
+        public void ListarCategorias(ListBox lstCategorias)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = "SELECT DISTINCT Categoria FROM Categorias";
+                conexion.Open();
+
+                //Ejecuta la consulta y devuelve el datareader con los resultados
+                OleDbDataReader reader = comando.ExecuteReader();
+                lstCategorias.Items.Clear();
+                // Mientras lea cada registro
+                while (reader.Read())
+                {
+                    string categoria = reader["Categoria"].ToString();
+                    lstCategorias.Items.Add(categoria);
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         public void AgregarContacto(string nom, string ape, string telefono, string correo, int cate)
         {
             try
@@ -194,7 +222,29 @@ namespace pryAgendaDeContactos
 
                 conexion.Open();
                 comando.ExecuteNonQuery();
-                MessageBox.Show("Se ha registrado la categoría", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"La categoría {cate} se ha registrado con éxito.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void EliminarCategorias(string cate)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = "DELETE FROM Categorias WHERE Categoria = ?";
+
+                comando.Parameters.AddWithValue("@Categoria", cate);
+
+                conexion.Open();
+                comando.ExecuteNonQuery();
+                MessageBox.Show($"La categoría {cate} se ha eliminado.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
