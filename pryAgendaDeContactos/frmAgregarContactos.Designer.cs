@@ -123,7 +123,7 @@
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(90, 53);
-            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.TabIndex = 15;
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -135,7 +135,7 @@
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(90, 53);
-            this.btnLimpiar.TabIndex = 3;
+            this.btnLimpiar.TabIndex = 16;
             this.btnLimpiar.Text = "LIMPIAR";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
@@ -148,7 +148,7 @@
             this.cmbCategoria.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(193, 25);
-            this.cmbCategoria.TabIndex = 9;
+            this.cmbCategoria.TabIndex = 14;
             // 
             // label5
             // 

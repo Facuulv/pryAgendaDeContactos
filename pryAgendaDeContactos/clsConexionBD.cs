@@ -367,5 +367,29 @@ namespace pryAgendaDeContactos
             }
             return tablaContacto;
         }
+        public void BuscarContacto(DataGridView dgvBuscar, string dato)
+        {
+            try
+            {
+                conexion = new OleDbConnection(cadena);
+                comando = new OleDbCommand();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = "SELECT * FROM Contactos WHERE Nombre LIKE @Dato OR Telefono LIKE @Dato OR Correo LIKE @Dato";
+                comando.Parameters.AddWithValue("@Dato", "%" + dato + "%");
+
+                DataTable tablaContactos = new DataTable();
+
+                adaptador = new OleDbDataAdapter(comando);
+                adaptador.Fill(tablaContactos);
+
+                dgvBuscar.DataSource = tablaContactos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

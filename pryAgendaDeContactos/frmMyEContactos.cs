@@ -33,6 +33,7 @@ namespace pryAgendaDeContactos
             Limpiar();
             if (cmbCategorias.SelectedItem != null)
             {
+                //gbDatosContacto.Enabled = true;
                 // Como SelectedValue/Index no funcionaban en la funcion de cargar los combos se rellena en un dataTable
                 // Por eso aca buscamos la fila seleccionada mediante el item q selecciona en el combo. Si seleccionó entra al if
                 DataRowView filaSelec = cmbCategorias.SelectedItem as DataRowView;
@@ -138,7 +139,9 @@ namespace pryAgendaDeContactos
         {
             Limpiar();
             lstContactos.Items.Clear();
+            cmbCategorias.DataSource = null;
             cmbCategorias.Items.Clear();
+            ObjModificar.CargarCategorias(cmbCategorias);
         }
     }
 }

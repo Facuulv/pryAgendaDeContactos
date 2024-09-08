@@ -30,7 +30,7 @@
         {
             this.tcContactos = new System.Windows.Forms.TabControl();
             this.tpModificar = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbDatosContacto = new System.Windows.Forms.GroupBox();
             this.lblIdContacto = new System.Windows.Forms.Label();
             this.pbImagen = new System.Windows.Forms.PictureBox();
             this.btnLimpiarTodo = new System.Windows.Forms.Button();
@@ -56,7 +56,7 @@
             this.dgvContactos = new System.Windows.Forms.DataGridView();
             this.tcContactos.SuspendLayout();
             this.tpModificar.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gbDatosContacto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tpEliminar.SuspendLayout();
@@ -77,7 +77,7 @@
             // tpModificar
             // 
             this.tpModificar.BackColor = System.Drawing.Color.Bisque;
-            this.tpModificar.Controls.Add(this.groupBox2);
+            this.tpModificar.Controls.Add(this.gbDatosContacto);
             this.tpModificar.Controls.Add(this.groupBox1);
             this.tpModificar.Location = new System.Drawing.Point(4, 26);
             this.tpModificar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -87,30 +87,30 @@
             this.tpModificar.TabIndex = 0;
             this.tpModificar.Text = "MODIFICAR CONTACTOS";
             // 
-            // groupBox2
+            // gbDatosContacto
             // 
-            this.groupBox2.Controls.Add(this.lblIdContacto);
-            this.groupBox2.Controls.Add(this.pbImagen);
-            this.groupBox2.Controls.Add(this.btnLimpiarTodo);
-            this.groupBox2.Controls.Add(this.btnLimpiar);
-            this.groupBox2.Controls.Add(this.btnModificar);
-            this.groupBox2.Controls.Add(this.cmbCategoria);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.txtCorreo);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.txtTelefono);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.txtApellido);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.txtNombre);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(194, 6);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(354, 329);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Datos a modificar";
+            this.gbDatosContacto.Controls.Add(this.lblIdContacto);
+            this.gbDatosContacto.Controls.Add(this.pbImagen);
+            this.gbDatosContacto.Controls.Add(this.btnLimpiarTodo);
+            this.gbDatosContacto.Controls.Add(this.btnLimpiar);
+            this.gbDatosContacto.Controls.Add(this.btnModificar);
+            this.gbDatosContacto.Controls.Add(this.cmbCategoria);
+            this.gbDatosContacto.Controls.Add(this.label7);
+            this.gbDatosContacto.Controls.Add(this.txtCorreo);
+            this.gbDatosContacto.Controls.Add(this.label6);
+            this.gbDatosContacto.Controls.Add(this.txtTelefono);
+            this.gbDatosContacto.Controls.Add(this.label5);
+            this.gbDatosContacto.Controls.Add(this.txtApellido);
+            this.gbDatosContacto.Controls.Add(this.label4);
+            this.gbDatosContacto.Controls.Add(this.txtNombre);
+            this.gbDatosContacto.Controls.Add(this.label3);
+            this.gbDatosContacto.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDatosContacto.Location = new System.Drawing.Point(194, 6);
+            this.gbDatosContacto.Name = "gbDatosContacto";
+            this.gbDatosContacto.Size = new System.Drawing.Size(354, 329);
+            this.gbDatosContacto.TabIndex = 5;
+            this.gbDatosContacto.TabStop = false;
+            this.gbDatosContacto.Text = "Datos a modificar";
             // 
             // lblIdContacto
             // 
@@ -361,8 +361,8 @@
             this.Load += new System.EventHandler(this.frmMyEContactos_Load);
             this.tcContactos.ResumeLayout(false);
             this.tpModificar.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gbDatosContacto.ResumeLayout(false);
+            this.gbDatosContacto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -376,7 +376,7 @@
 
         private System.Windows.Forms.TabControl tcContactos;
         private System.Windows.Forms.TabPage tpModificar;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbDatosContacto;
         private System.Windows.Forms.Label lblIdContacto;
         private System.Windows.Forms.PictureBox pbImagen;
         private System.Windows.Forms.Button btnLimpiarTodo;
