@@ -85,5 +85,70 @@ namespace pryAgendaDeContactos
             frmBuscarContactos Buscar = new frmBuscarContactos();
             Buscar.ShowDialog();
         }
+
+        private void exportarACSVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {                
+                DialogResult resultado = MessageBox.Show(
+                    "Se exportarán los contactos a un nuevo archivo CSV. ¿Desea realizarlo de todas formas?",
+                    "Confirmar Exportación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                // Si el usuario selecciona "Yes", exporta
+                if (resultado == DialogResult.Yes)
+                {
+                    clsExportarContactos ObjExportar = new clsExportarContactos();
+                    DataTable contactos = ObjExportar.ObtenerContactos();
+
+                    if (contactos != null && contactos.Rows.Count > 0)
+                    {
+                        ObjExportar.ExportarCsv(contactos);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No hay contactos disponibles para exportar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al exportar contactos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void exportarATXTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult resultado = MessageBox.Show(
+                    "Se exportarán los contactos a un nuevo archivo vCard. ¿Desea realizarlo de todas formas?",
+                    "Confirmar Exportación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (resultado == DialogResult.Yes)
+                {
+                    clsExportarContactos ObjExportar = new clsExportarContactos();
+                    DataTable contactos = ObjExportar.ObtenerContactos();
+
+                    if (contactos != null && contactos.Rows.Count > 0)
+                    {
+                        ObjExportar.ExportarVCard(contactos);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No hay contactos disponibles para exportar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al exportar contactos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

@@ -28,13 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Contactos");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Nodo1");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Contactos");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Nodo1");
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.tsbAgregar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbMyE = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbCategorias = new System.Windows.Forms.ToolStripDropDownButton();
+            this.agregarCategoríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsdbExportar = new System.Windows.Forms.ToolStripDropDownButton();
+            this.exportarACSVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarATXTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.scContactos = new System.Windows.Forms.SplitContainer();
             this.tvContactos = new System.Windows.Forms.TreeView();
@@ -49,27 +57,18 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pbContacto = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnRefrescar = new System.Windows.Forms.Button();
-            this.tsbAgregar = new System.Windows.Forms.ToolStripButton();
-            this.tsbMyE = new System.Windows.Forms.ToolStripButton();
-            this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
-            this.tsbCategorias = new System.Windows.Forms.ToolStripDropDownButton();
-            this.agregarCategoríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsdbExportar = new System.Windows.Forms.ToolStripDropDownButton();
-            this.exportarACSVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportarATXTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pbContacto = new System.Windows.Forms.PictureBox();
             this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scContactos)).BeginInit();
             this.scContactos.Panel1.SuspendLayout();
             this.scContactos.Panel2.SuspendLayout();
             this.scContactos.SuspendLayout();
             this.gbDatosContacto.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbContacto)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip2
@@ -95,25 +94,96 @@
             this.toolStrip2.TabIndex = 12;
             this.toolStrip2.Text = "toolStrip2";
             // 
+            // tsbAgregar
+            // 
+            this.tsbAgregar.Image = global::pryAgendaDeContactos.Properties.Resources.person_add_24dp_5F6368_FILL0_wght400_GRAD0_opsz24;
+            this.tsbAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAgregar.Name = "tsbAgregar";
+            this.tsbAgregar.Size = new System.Drawing.Size(83, 44);
+            this.tsbAgregar.Text = "AGREGAR";
+            this.tsbAgregar.Click += new System.EventHandler(this.tsbAgregar_Click);
+            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 47);
+            // 
+            // tsbMyE
+            // 
+            this.tsbMyE.Image = global::pryAgendaDeContactos.Properties.Resources.settings_24dp_5F6368_FILL0_wght400_GRAD0_opsz24;
+            this.tsbMyE.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbMyE.Name = "tsbMyE";
+            this.tsbMyE.Size = new System.Drawing.Size(152, 44);
+            this.tsbMyE.Text = "MODIFICAR/ELIMINAR";
+            this.tsbMyE.Click += new System.EventHandler(this.tsbMyE_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 47);
             // 
+            // tsbBuscar
+            // 
+            this.tsbBuscar.Image = global::pryAgendaDeContactos.Properties.Resources.search_24dp_5F6368_FILL0_wght400_GRAD0_opsz24;
+            this.tsbBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbBuscar.Name = "tsbBuscar";
+            this.tsbBuscar.Size = new System.Drawing.Size(75, 44);
+            this.tsbBuscar.Text = "BUSCAR";
+            this.tsbBuscar.Click += new System.EventHandler(this.tsbBuscar_Click);
+            // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 47);
             // 
+            // tsbCategorias
+            // 
+            this.tsbCategorias.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarCategoríasToolStripMenuItem});
+            this.tsbCategorias.Image = global::pryAgendaDeContactos.Properties.Resources.category_24dp_5F6368_FILL0_wght400_GRAD0_opsz24;
+            this.tsbCategorias.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCategorias.Name = "tsbCategorias";
+            this.tsbCategorias.Size = new System.Drawing.Size(108, 44);
+            this.tsbCategorias.Text = "CATEGORÍAS";
+            // 
+            // agregarCategoríasToolStripMenuItem
+            // 
+            this.agregarCategoríasToolStripMenuItem.Image = global::pryAgendaDeContactos.Properties.Resources.add_24dp_5F6368_FILL0_wght400_GRAD0_opsz24;
+            this.agregarCategoríasToolStripMenuItem.Name = "agregarCategoríasToolStripMenuItem";
+            this.agregarCategoríasToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
+            this.agregarCategoríasToolStripMenuItem.Text = "Agregar categorías...";
+            this.agregarCategoríasToolStripMenuItem.Click += new System.EventHandler(this.agregarCategoríasToolStripMenuItem_Click);
+            // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 47);
+            // 
+            // tsdbExportar
+            // 
+            this.tsdbExportar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportarACSVToolStripMenuItem,
+            this.exportarATXTToolStripMenuItem});
+            this.tsdbExportar.Image = global::pryAgendaDeContactos.Properties.Resources.export_notes_24dp_5F6368_FILL0_wght400_GRAD0_opsz24;
+            this.tsdbExportar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsdbExportar.Name = "tsdbExportar";
+            this.tsdbExportar.Size = new System.Drawing.Size(95, 44);
+            this.tsdbExportar.Text = "EXPORTAR";
+            // 
+            // exportarACSVToolStripMenuItem
+            // 
+            this.exportarACSVToolStripMenuItem.Image = global::pryAgendaDeContactos.Properties.Resources.upgrade_24dp_5F6368_FILL0_wght400_GRAD0_opsz24;
+            this.exportarACSVToolStripMenuItem.Name = "exportarACSVToolStripMenuItem";
+            this.exportarACSVToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.exportarACSVToolStripMenuItem.Text = "Exportar a CSV";
+            this.exportarACSVToolStripMenuItem.Click += new System.EventHandler(this.exportarACSVToolStripMenuItem_Click);
+            // 
+            // exportarATXTToolStripMenuItem
+            // 
+            this.exportarATXTToolStripMenuItem.Name = "exportarATXTToolStripMenuItem";
+            this.exportarATXTToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.exportarATXTToolStripMenuItem.Text = "Exportar a vCard";
+            this.exportarATXTToolStripMenuItem.Click += new System.EventHandler(this.exportarATXTToolStripMenuItem_Click);
             // 
             // toolStripSeparator6
             // 
@@ -147,13 +217,13 @@
             this.tvContactos.HideSelection = false;
             this.tvContactos.Location = new System.Drawing.Point(0, 0);
             this.tvContactos.Name = "tvContactos";
-            treeNode1.Name = "Nodo0";
-            treeNode1.Text = "Contactos";
-            treeNode2.Name = "Nodo1";
-            treeNode2.Text = "Nodo1";
+            treeNode9.Name = "Nodo0";
+            treeNode9.Text = "Contactos";
+            treeNode10.Name = "Nodo1";
+            treeNode10.Text = "Nodo1";
             this.tvContactos.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
+            treeNode9,
+            treeNode10});
             this.tvContactos.ShowNodeToolTips = true;
             this.tvContactos.Size = new System.Drawing.Size(209, 329);
             this.tvContactos.TabIndex = 2;
@@ -275,6 +345,16 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "NOMBRE:";
             // 
+            // pbContacto
+            // 
+            this.pbContacto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbContacto.Image = global::pryAgendaDeContactos.Properties.Resources.contacts_product_24dp_5F6368_FILL0_wght400_GRAD0_opsz24;
+            this.pbContacto.Location = new System.Drawing.Point(26, 26);
+            this.pbContacto.Name = "pbContacto";
+            this.pbContacto.Size = new System.Drawing.Size(96, 103);
+            this.pbContacto.TabIndex = 0;
+            this.pbContacto.TabStop = false;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Bisque;
@@ -309,91 +389,6 @@
             this.btnRefrescar.UseVisualStyleBackColor = false;
             this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
-            // tsbAgregar
-            // 
-            this.tsbAgregar.Image = global::pryAgendaDeContactos.Properties.Resources.person_add_24dp_5F6368_FILL0_wght400_GRAD0_opsz24;
-            this.tsbAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbAgregar.Name = "tsbAgregar";
-            this.tsbAgregar.Size = new System.Drawing.Size(83, 44);
-            this.tsbAgregar.Text = "AGREGAR";
-            this.tsbAgregar.Click += new System.EventHandler(this.tsbAgregar_Click);
-            // 
-            // tsbMyE
-            // 
-            this.tsbMyE.Image = global::pryAgendaDeContactos.Properties.Resources.settings_24dp_5F6368_FILL0_wght400_GRAD0_opsz24;
-            this.tsbMyE.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbMyE.Name = "tsbMyE";
-            this.tsbMyE.Size = new System.Drawing.Size(152, 44);
-            this.tsbMyE.Text = "MODIFICAR/ELIMINAR";
-            this.tsbMyE.Click += new System.EventHandler(this.tsbMyE_Click);
-            // 
-            // tsbBuscar
-            // 
-            this.tsbBuscar.Image = global::pryAgendaDeContactos.Properties.Resources.search_24dp_5F6368_FILL0_wght400_GRAD0_opsz24;
-            this.tsbBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbBuscar.Name = "tsbBuscar";
-            this.tsbBuscar.Size = new System.Drawing.Size(75, 44);
-            this.tsbBuscar.Text = "BUSCAR";
-            this.tsbBuscar.Click += new System.EventHandler(this.tsbBuscar_Click);
-            // 
-            // tsbCategorias
-            // 
-            this.tsbCategorias.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarCategoríasToolStripMenuItem});
-            this.tsbCategorias.Image = global::pryAgendaDeContactos.Properties.Resources.category_24dp_5F6368_FILL0_wght400_GRAD0_opsz24;
-            this.tsbCategorias.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbCategorias.Name = "tsbCategorias";
-            this.tsbCategorias.Size = new System.Drawing.Size(108, 44);
-            this.tsbCategorias.Text = "CATEGORÍAS";
-            // 
-            // agregarCategoríasToolStripMenuItem
-            // 
-            this.agregarCategoríasToolStripMenuItem.Image = global::pryAgendaDeContactos.Properties.Resources.add_24dp_5F6368_FILL0_wght400_GRAD0_opsz24;
-            this.agregarCategoríasToolStripMenuItem.Name = "agregarCategoríasToolStripMenuItem";
-            this.agregarCategoríasToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
-            this.agregarCategoríasToolStripMenuItem.Text = "Agregar categorías...";
-            this.agregarCategoríasToolStripMenuItem.Click += new System.EventHandler(this.agregarCategoríasToolStripMenuItem_Click);
-            // 
-            // tsdbExportar
-            // 
-            this.tsdbExportar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exportarACSVToolStripMenuItem,
-            this.exportarATXTToolStripMenuItem,
-            this.toolStripMenuItem1});
-            this.tsdbExportar.Image = global::pryAgendaDeContactos.Properties.Resources.export_notes_24dp_5F6368_FILL0_wght400_GRAD0_opsz24;
-            this.tsdbExportar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsdbExportar.Name = "tsdbExportar";
-            this.tsdbExportar.Size = new System.Drawing.Size(95, 44);
-            this.tsdbExportar.Text = "EXPORTAR";
-            // 
-            // exportarACSVToolStripMenuItem
-            // 
-            this.exportarACSVToolStripMenuItem.Name = "exportarACSVToolStripMenuItem";
-            this.exportarACSVToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.exportarACSVToolStripMenuItem.Text = "Exportar a CSV";
-            // 
-            // exportarATXTToolStripMenuItem
-            // 
-            this.exportarATXTToolStripMenuItem.Name = "exportarATXTToolStripMenuItem";
-            this.exportarATXTToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.exportarATXTToolStripMenuItem.Text = "Exportar a TXT";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
-            this.toolStripMenuItem1.Text = "Exportar a vCard";
-            // 
-            // pbContacto
-            // 
-            this.pbContacto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbContacto.Image = global::pryAgendaDeContactos.Properties.Resources.contacts_product_24dp_5F6368_FILL0_wght400_GRAD0_opsz24;
-            this.pbContacto.Location = new System.Drawing.Point(26, 26);
-            this.pbContacto.Name = "pbContacto";
-            this.pbContacto.Size = new System.Drawing.Size(96, 103);
-            this.pbContacto.TabIndex = 0;
-            this.pbContacto.TabStop = false;
-            // 
             // frmVentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -419,9 +414,9 @@
             this.scContactos.ResumeLayout(false);
             this.gbDatosContacto.ResumeLayout(false);
             this.gbDatosContacto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbContacto)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbContacto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -441,7 +436,6 @@
         private System.Windows.Forms.ToolStripDropDownButton tsdbExportar;
         private System.Windows.Forms.ToolStripMenuItem exportarACSVToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exportarATXTToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.SplitContainer scContactos;
         private System.Windows.Forms.TreeView tvContactos;
