@@ -165,5 +165,8 @@
   <ItemGroup>
     <None Include="Resources\library_add_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_24dp_5F6368_FILL0_wght400_GRAD0_opsz241.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

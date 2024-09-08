@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Contactos");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Nodo1");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Contactos");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Nodo1");
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.tsbAgregar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -130,6 +130,7 @@
             this.tsbBuscar.Name = "tsbBuscar";
             this.tsbBuscar.Size = new System.Drawing.Size(75, 44);
             this.tsbBuscar.Text = "BUSCAR";
+            this.tsbBuscar.Click += new System.EventHandler(this.tsbBuscar_Click);
             // 
             // toolStripSeparator5
             // 
@@ -221,13 +222,13 @@
             this.tvContactos.HideSelection = false;
             this.tvContactos.Location = new System.Drawing.Point(0, 0);
             this.tvContactos.Name = "tvContactos";
-            treeNode1.Name = "Nodo0";
-            treeNode1.Text = "Contactos";
-            treeNode2.Name = "Nodo1";
-            treeNode2.Text = "Nodo1";
+            treeNode3.Name = "Nodo0";
+            treeNode3.Text = "Contactos";
+            treeNode4.Name = "Nodo1";
+            treeNode4.Text = "Nodo1";
             this.tvContactos.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
+            treeNode3,
+            treeNode4});
             this.tvContactos.ShowNodeToolTips = true;
             this.tvContactos.Size = new System.Drawing.Size(209, 329);
             this.tvContactos.TabIndex = 2;

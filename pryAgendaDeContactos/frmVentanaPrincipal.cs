@@ -79,5 +79,11 @@ namespace pryAgendaDeContactos
         {
             ActualizarContactos();
         }
+
+        private void tsbBuscar_Click(object sender, EventArgs e)
+        {
+            frmBuscarContactos Buscar = new frmBuscarContactos();
+            Buscar.ShowDialog();
+        }
     }
 }
