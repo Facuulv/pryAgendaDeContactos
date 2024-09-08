@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Contactos");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Nodo1");
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -52,6 +51,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnRefrescar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.tsbAgregar = new System.Windows.Forms.ToolStripButton();
             this.tsbMyE = new System.Windows.Forms.ToolStripButton();
             this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
@@ -61,7 +61,6 @@
             this.exportarACSVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportarATXTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pbContacto = new System.Windows.Forms.PictureBox();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scContactos)).BeginInit();
             this.scContactos.Panel1.SuspendLayout();
@@ -149,11 +148,8 @@
             this.tvContactos.Name = "tvContactos";
             treeNode1.Name = "Nodo0";
             treeNode1.Text = "Contactos";
-            treeNode2.Name = "Nodo1";
-            treeNode2.Text = "Nodo1";
             this.tvContactos.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
+            treeNode1});
             this.tvContactos.ShowNodeToolTips = true;
             this.tvContactos.Size = new System.Drawing.Size(209, 329);
             this.tvContactos.TabIndex = 2;
@@ -289,11 +285,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 10);
+            this.label1.Location = new System.Drawing.Point(40, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 30);
+            this.label1.Size = new System.Drawing.Size(152, 30);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Agenda de Contactos";
+            this.label1.Text = "Mis Contactos";
             // 
             // btnRefrescar
             // 
@@ -308,6 +304,20 @@
             this.btnRefrescar.Text = "REFRESCAR ";
             this.btnRefrescar.UseVisualStyleBackColor = false;
             this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.Bisque;
+            this.btnSalir.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnSalir.FlatAppearance.BorderSize = 2;
+            this.btnSalir.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(446, 476);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(211, 30);
+            this.btnSalir.TabIndex = 14;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // tsbAgregar
             // 
@@ -369,7 +379,7 @@
             // 
             this.exportarACSVToolStripMenuItem.Image = global::pryAgendaDeContactos.Properties.Resources.csv_24dp_5F6368_FILL0_wght400_GRAD0_opsz24;
             this.exportarACSVToolStripMenuItem.Name = "exportarACSVToolStripMenuItem";
-            this.exportarACSVToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.exportarACSVToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
             this.exportarACSVToolStripMenuItem.Text = "Exportar a CSV";
             this.exportarACSVToolStripMenuItem.Click += new System.EventHandler(this.exportarACSVToolStripMenuItem_Click);
             // 
@@ -377,7 +387,7 @@
             // 
             this.exportarATXTToolStripMenuItem.Image = global::pryAgendaDeContactos.Properties.Resources.open_in_new_24dp_5F6368_FILL0_wght400_GRAD0_opsz24;
             this.exportarATXTToolStripMenuItem.Name = "exportarATXTToolStripMenuItem";
-            this.exportarATXTToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.exportarATXTToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
             this.exportarATXTToolStripMenuItem.Text = "Exportar a vCard";
             this.exportarATXTToolStripMenuItem.Click += new System.EventHandler(this.exportarATXTToolStripMenuItem_Click);
             // 
@@ -390,20 +400,6 @@
             this.pbContacto.Size = new System.Drawing.Size(96, 103);
             this.pbContacto.TabIndex = 0;
             this.pbContacto.TabStop = false;
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.BackColor = System.Drawing.Color.Bisque;
-            this.btnSalir.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnSalir.FlatAppearance.BorderSize = 2;
-            this.btnSalir.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(446, 476);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(211, 30);
-            this.btnSalir.TabIndex = 14;
-            this.btnSalir.Text = "SALIR";
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // frmVentanaPrincipal
             // 
