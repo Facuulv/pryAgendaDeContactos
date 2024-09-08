@@ -150,5 +150,10 @@ namespace pryAgendaDeContactos
                 MessageBox.Show("Error al exportar contactos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

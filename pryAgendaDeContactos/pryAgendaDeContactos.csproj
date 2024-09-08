@@ -172,5 +172,17 @@
   <ItemGroup>
     <None Include="Resources\upgrade_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open_in_new_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_outward_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_open_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\csv_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
