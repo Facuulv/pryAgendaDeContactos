@@ -48,6 +48,8 @@
             this.btnCorreo = new System.Windows.Forms.Button();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnListar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -70,6 +72,8 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Bisque;
+            this.splitContainer1.Panel1.Controls.Add(this.btnLimpiar);
+            this.splitContainer1.Panel1.Controls.Add(this.btnListar);
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
             this.splitContainer1.Panel1.Controls.Add(this.panel1);
             this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
@@ -78,7 +82,7 @@
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Bisque;
             this.splitContainer1.Panel2.Controls.Add(this.dgvContactos);
-            this.splitContainer1.Size = new System.Drawing.Size(630, 454);
+            this.splitContainer1.Size = new System.Drawing.Size(630, 504);
             this.splitContainer1.SplitterDistance = 207;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -137,7 +141,7 @@
             this.dgvContactos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvContactos.Location = new System.Drawing.Point(0, 0);
             this.dgvContactos.Name = "dgvContactos";
-            this.dgvContactos.Size = new System.Drawing.Size(415, 450);
+            this.dgvContactos.Size = new System.Drawing.Size(415, 500);
             this.dgvContactos.TabIndex = 0;
             // 
             // panel1
@@ -283,18 +287,41 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Correo:";
             // 
+            // btnListar
+            // 
+            this.btnListar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnListar.Location = new System.Drawing.Point(4, 451);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Size = new System.Drawing.Size(95, 45);
+            this.btnListar.TabIndex = 3;
+            this.btnListar.Text = "LISTAR";
+            this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnLimpiar.Location = new System.Drawing.Point(105, 451);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(95, 45);
+            this.btnLimpiar.TabIndex = 4;
+            this.btnLimpiar.Text = "LIMPIAR";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // frmBuscarContactos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(654, 473);
+            this.ClientSize = new System.Drawing.Size(653, 523);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmBuscarContactos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar Contactos";
+            this.Load += new System.EventHandler(this.frmBuscarContactos_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -336,5 +363,7 @@
         private System.Windows.Forms.Button btnNombre;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnListar;
     }
 }
