@@ -28,12 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Contactos");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Contactos");
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.tsbAgregar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbMyE = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbCategorias = new System.Windows.Forms.ToolStripDropDownButton();
+            this.agregarCategoríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsdbExportar = new System.Windows.Forms.ToolStripDropDownButton();
+            this.exportarACSVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarATXTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.scContactos = new System.Windows.Forms.SplitContainer();
             this.tvContactos = new System.Windows.Forms.TreeView();
@@ -48,27 +56,19 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pbContacto = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.tsbAgregar = new System.Windows.Forms.ToolStripButton();
-            this.tsbMyE = new System.Windows.Forms.ToolStripButton();
-            this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
-            this.tsbCategorias = new System.Windows.Forms.ToolStripDropDownButton();
-            this.agregarCategoríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsdbExportar = new System.Windows.Forms.ToolStripDropDownButton();
-            this.exportarACSVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportarATXTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pbContacto = new System.Windows.Forms.PictureBox();
             this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scContactos)).BeginInit();
             this.scContactos.Panel1.SuspendLayout();
             this.scContactos.Panel2.SuspendLayout();
             this.scContactos.SuspendLayout();
             this.gbDatosContacto.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbContacto)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip2
@@ -94,231 +94,6 @@
             this.toolStrip2.TabIndex = 12;
             this.toolStrip2.Text = "toolStrip2";
             // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 47);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 47);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 47);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 47);
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 47);
-            // 
-            // scContactos
-            // 
-            this.scContactos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.scContactos.Location = new System.Drawing.Point(12, 137);
-            this.scContactos.Name = "scContactos";
-            // 
-            // scContactos.Panel1
-            // 
-            this.scContactos.Panel1.Controls.Add(this.tvContactos);
-            // 
-            // scContactos.Panel2
-            // 
-            this.scContactos.Panel2.BackColor = System.Drawing.Color.Bisque;
-            this.scContactos.Panel2.Controls.Add(this.gbDatosContacto);
-            this.scContactos.Size = new System.Drawing.Size(645, 333);
-            this.scContactos.SplitterDistance = 213;
-            this.scContactos.TabIndex = 11;
-            // 
-            // tvContactos
-            // 
-            this.tvContactos.BackColor = System.Drawing.Color.OldLace;
-            this.tvContactos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tvContactos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tvContactos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tvContactos.HideSelection = false;
-            this.tvContactos.Location = new System.Drawing.Point(0, 0);
-            this.tvContactos.Name = "tvContactos";
-            treeNode1.Name = "Nodo0";
-            treeNode1.Text = "Contactos";
-            this.tvContactos.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1});
-            this.tvContactos.ShowNodeToolTips = true;
-            this.tvContactos.Size = new System.Drawing.Size(209, 329);
-            this.tvContactos.TabIndex = 2;
-            this.tvContactos.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvContactos_AfterSelect);
-            // 
-            // gbDatosContacto
-            // 
-            this.gbDatosContacto.Controls.Add(this.lblRelacion);
-            this.gbDatosContacto.Controls.Add(this.label11);
-            this.gbDatosContacto.Controls.Add(this.lblCorreo);
-            this.gbDatosContacto.Controls.Add(this.label9);
-            this.gbDatosContacto.Controls.Add(this.lblTelefono);
-            this.gbDatosContacto.Controls.Add(this.label7);
-            this.gbDatosContacto.Controls.Add(this.lblApellido);
-            this.gbDatosContacto.Controls.Add(this.label5);
-            this.gbDatosContacto.Controls.Add(this.lblNombre);
-            this.gbDatosContacto.Controls.Add(this.label2);
-            this.gbDatosContacto.Controls.Add(this.pbContacto);
-            this.gbDatosContacto.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosContacto.Location = new System.Drawing.Point(20, 3);
-            this.gbDatosContacto.Name = "gbDatosContacto";
-            this.gbDatosContacto.Size = new System.Drawing.Size(383, 319);
-            this.gbDatosContacto.TabIndex = 0;
-            this.gbDatosContacto.TabStop = false;
-            this.gbDatosContacto.Text = "DATOS DEL CONTACTO";
-            // 
-            // lblRelacion
-            // 
-            this.lblRelacion.BackColor = System.Drawing.Color.PeachPuff;
-            this.lblRelacion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblRelacion.Location = new System.Drawing.Point(122, 257);
-            this.lblRelacion.Name = "lblRelacion";
-            this.lblRelacion.Size = new System.Drawing.Size(215, 28);
-            this.lblRelacion.TabIndex = 11;
-            this.lblRelacion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(23, 263);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(73, 17);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "RELACIÓN:";
-            // 
-            // lblCorreo
-            // 
-            this.lblCorreo.BackColor = System.Drawing.Color.PeachPuff;
-            this.lblCorreo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCorreo.Location = new System.Drawing.Point(122, 202);
-            this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(215, 28);
-            this.lblCorreo.TabIndex = 9;
-            this.lblCorreo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(23, 208);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 17);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "CORREO:";
-            // 
-            // lblTelefono
-            // 
-            this.lblTelefono.BackColor = System.Drawing.Color.PeachPuff;
-            this.lblTelefono.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTelefono.Location = new System.Drawing.Point(122, 147);
-            this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(215, 28);
-            this.lblTelefono.TabIndex = 7;
-            this.lblTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(23, 153);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 17);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "TELÉFONO:";
-            // 
-            // lblApellido
-            // 
-            this.lblApellido.BackColor = System.Drawing.Color.PeachPuff;
-            this.lblApellido.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblApellido.Location = new System.Drawing.Point(204, 92);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(133, 28);
-            this.lblApellido.TabIndex = 4;
-            this.lblApellido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(128, 98);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 17);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "APELLIDO:";
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.BackColor = System.Drawing.Color.PeachPuff;
-            this.lblNombre.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblNombre.Location = new System.Drawing.Point(204, 38);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(133, 27);
-            this.lblNombre.TabIndex = 2;
-            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(128, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "NOMBRE:";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Bisque;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 68);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(241, 53);
-            this.panel1.TabIndex = 10;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 30);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Mis Contactos";
-            // 
-            // btnRefrescar
-            // 
-            this.btnRefrescar.BackColor = System.Drawing.Color.Bisque;
-            this.btnRefrescar.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnRefrescar.FlatAppearance.BorderSize = 2;
-            this.btnRefrescar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefrescar.Location = new System.Drawing.Point(12, 474);
-            this.btnRefrescar.Name = "btnRefrescar";
-            this.btnRefrescar.Size = new System.Drawing.Size(211, 30);
-            this.btnRefrescar.TabIndex = 13;
-            this.btnRefrescar.Text = "REFRESCAR ";
-            this.btnRefrescar.UseVisualStyleBackColor = false;
-            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.BackColor = System.Drawing.Color.Bisque;
-            this.btnSalir.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnSalir.FlatAppearance.BorderSize = 2;
-            this.btnSalir.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(446, 476);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(211, 30);
-            this.btnSalir.TabIndex = 14;
-            this.btnSalir.Text = "SALIR";
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
             // tsbAgregar
             // 
             this.tsbAgregar.Image = global::pryAgendaDeContactos.Properties.Resources.person_add_24dp_5F6368_FILL0_wght400_GRAD0_opsz24;
@@ -327,6 +102,11 @@
             this.tsbAgregar.Size = new System.Drawing.Size(83, 44);
             this.tsbAgregar.Text = "AGREGAR";
             this.tsbAgregar.Click += new System.EventHandler(this.tsbAgregar_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 47);
             // 
             // tsbMyE
             // 
@@ -337,6 +117,11 @@
             this.tsbMyE.Text = "MODIFICAR/ELIMINAR";
             this.tsbMyE.Click += new System.EventHandler(this.tsbMyE_Click);
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 47);
+            // 
             // tsbBuscar
             // 
             this.tsbBuscar.Image = global::pryAgendaDeContactos.Properties.Resources.search_24dp_5F6368_FILL0_wght400_GRAD0_opsz24;
@@ -345,6 +130,11 @@
             this.tsbBuscar.Size = new System.Drawing.Size(75, 44);
             this.tsbBuscar.Text = "BUSCAR";
             this.tsbBuscar.Click += new System.EventHandler(this.tsbBuscar_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 47);
             // 
             // tsbCategorias
             // 
@@ -363,6 +153,11 @@
             this.agregarCategoríasToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
             this.agregarCategoríasToolStripMenuItem.Text = "Agregar categorías...";
             this.agregarCategoríasToolStripMenuItem.Click += new System.EventHandler(this.agregarCategoríasToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 47);
             // 
             // tsdbExportar
             // 
@@ -391,6 +186,163 @@
             this.exportarATXTToolStripMenuItem.Text = "Exportar a vCard";
             this.exportarATXTToolStripMenuItem.Click += new System.EventHandler(this.exportarATXTToolStripMenuItem_Click);
             // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 47);
+            // 
+            // scContactos
+            // 
+            this.scContactos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.scContactos.Location = new System.Drawing.Point(12, 137);
+            this.scContactos.Name = "scContactos";
+            // 
+            // scContactos.Panel1
+            // 
+            this.scContactos.Panel1.Controls.Add(this.tvContactos);
+            // 
+            // scContactos.Panel2
+            // 
+            this.scContactos.Panel2.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.scContactos.Panel2.Controls.Add(this.gbDatosContacto);
+            this.scContactos.Size = new System.Drawing.Size(645, 333);
+            this.scContactos.SplitterDistance = 213;
+            this.scContactos.TabIndex = 11;
+            // 
+            // tvContactos
+            // 
+            this.tvContactos.BackColor = System.Drawing.SystemColors.Window;
+            this.tvContactos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tvContactos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tvContactos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tvContactos.HideSelection = false;
+            this.tvContactos.Location = new System.Drawing.Point(0, 0);
+            this.tvContactos.Name = "tvContactos";
+            treeNode5.Name = "Nodo0";
+            treeNode5.Text = "Contactos";
+            this.tvContactos.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode5});
+            this.tvContactos.ShowNodeToolTips = true;
+            this.tvContactos.Size = new System.Drawing.Size(209, 329);
+            this.tvContactos.TabIndex = 2;
+            this.tvContactos.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvContactos_AfterSelect);
+            // 
+            // gbDatosContacto
+            // 
+            this.gbDatosContacto.Controls.Add(this.lblRelacion);
+            this.gbDatosContacto.Controls.Add(this.label11);
+            this.gbDatosContacto.Controls.Add(this.lblCorreo);
+            this.gbDatosContacto.Controls.Add(this.label9);
+            this.gbDatosContacto.Controls.Add(this.lblTelefono);
+            this.gbDatosContacto.Controls.Add(this.label7);
+            this.gbDatosContacto.Controls.Add(this.lblApellido);
+            this.gbDatosContacto.Controls.Add(this.label5);
+            this.gbDatosContacto.Controls.Add(this.lblNombre);
+            this.gbDatosContacto.Controls.Add(this.label2);
+            this.gbDatosContacto.Controls.Add(this.pbContacto);
+            this.gbDatosContacto.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDatosContacto.Location = new System.Drawing.Point(20, 3);
+            this.gbDatosContacto.Name = "gbDatosContacto";
+            this.gbDatosContacto.Size = new System.Drawing.Size(383, 319);
+            this.gbDatosContacto.TabIndex = 0;
+            this.gbDatosContacto.TabStop = false;
+            this.gbDatosContacto.Text = "DATOS DEL CONTACTO";
+            // 
+            // lblRelacion
+            // 
+            this.lblRelacion.BackColor = System.Drawing.Color.Bisque;
+            this.lblRelacion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblRelacion.Location = new System.Drawing.Point(122, 257);
+            this.lblRelacion.Name = "lblRelacion";
+            this.lblRelacion.Size = new System.Drawing.Size(215, 28);
+            this.lblRelacion.TabIndex = 11;
+            this.lblRelacion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(23, 263);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(73, 17);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "RELACIÓN:";
+            // 
+            // lblCorreo
+            // 
+            this.lblCorreo.BackColor = System.Drawing.Color.Bisque;
+            this.lblCorreo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCorreo.Location = new System.Drawing.Point(122, 202);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(215, 28);
+            this.lblCorreo.TabIndex = 9;
+            this.lblCorreo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(23, 208);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(62, 17);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "CORREO:";
+            // 
+            // lblTelefono
+            // 
+            this.lblTelefono.BackColor = System.Drawing.Color.Bisque;
+            this.lblTelefono.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTelefono.Location = new System.Drawing.Point(122, 147);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(215, 28);
+            this.lblTelefono.TabIndex = 7;
+            this.lblTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(23, 153);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 17);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "TELÉFONO:";
+            // 
+            // lblApellido
+            // 
+            this.lblApellido.BackColor = System.Drawing.Color.Bisque;
+            this.lblApellido.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblApellido.Location = new System.Drawing.Point(204, 92);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(133, 28);
+            this.lblApellido.TabIndex = 4;
+            this.lblApellido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(128, 98);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 17);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "APELLIDO:";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.BackColor = System.Drawing.Color.Bisque;
+            this.lblNombre.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNombre.Location = new System.Drawing.Point(204, 38);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(133, 27);
+            this.lblNombre.TabIndex = 2;
+            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(128, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "NOMBRE:";
+            // 
             // pbContacto
             // 
             this.pbContacto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -400,6 +352,54 @@
             this.pbContacto.Size = new System.Drawing.Size(96, 103);
             this.pbContacto.TabIndex = 0;
             this.pbContacto.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(12, 68);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(241, 53);
+            this.panel1.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(40, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(152, 30);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Mis Contactos";
+            // 
+            // btnRefrescar
+            // 
+            this.btnRefrescar.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.btnRefrescar.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnRefrescar.FlatAppearance.BorderSize = 2;
+            this.btnRefrescar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefrescar.Location = new System.Drawing.Point(12, 474);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(211, 30);
+            this.btnRefrescar.TabIndex = 13;
+            this.btnRefrescar.Text = "REFRESCAR ";
+            this.btnRefrescar.UseVisualStyleBackColor = false;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.btnSalir.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnSalir.FlatAppearance.BorderSize = 2;
+            this.btnSalir.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(446, 476);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(211, 30);
+            this.btnSalir.TabIndex = 14;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // frmVentanaPrincipal
             // 
@@ -413,6 +413,7 @@
             this.Controls.Add(this.scContactos);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmVentanaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -427,9 +428,9 @@
             this.scContactos.ResumeLayout(false);
             this.gbDatosContacto.ResumeLayout(false);
             this.gbDatosContacto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbContacto)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbContacto)).EndInit();
             this.ResumeLayout(false);
 
         }

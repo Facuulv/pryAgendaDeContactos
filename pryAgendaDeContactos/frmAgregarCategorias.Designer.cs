@@ -44,10 +44,10 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Bisque;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(282, 24);
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(282, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(219, 33);
+            this.label2.Size = new System.Drawing.Size(264, 48);
             this.label2.TabIndex = 5;
             this.label2.Text = "CATEGORIAS EXISTENTES";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -56,22 +56,22 @@
             // 
             this.lstCategorias.FormattingEnabled = true;
             this.lstCategorias.ItemHeight = 16;
-            this.lstCategorias.Location = new System.Drawing.Point(282, 59);
+            this.lstCategorias.Location = new System.Drawing.Point(282, 60);
             this.lstCategorias.Name = "lstCategorias";
-            this.lstCategorias.Size = new System.Drawing.Size(219, 132);
+            this.lstCategorias.Size = new System.Drawing.Size(264, 116);
             this.lstCategorias.TabIndex = 4;
             this.lstCategorias.SelectedIndexChanged += new System.EventHandler(this.lstCategorias_SelectedIndexChanged);
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Bisque;
+            this.groupBox1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.groupBox1.Controls.Add(this.btnQuitar);
             this.groupBox1.Controls.Add(this.pbImagen);
             this.groupBox1.Controls.Add(this.btnCategoria);
             this.groupBox1.Controls.Add(this.txtCategoria);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 24);
+            this.groupBox1.Location = new System.Drawing.Point(12, 9);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(264, 167);
             this.groupBox1.TabIndex = 3;
@@ -83,7 +83,7 @@
             this.btnQuitar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitar.Location = new System.Drawing.Point(6, 118);
             this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(134, 34);
+            this.btnQuitar.Size = new System.Drawing.Size(252, 34);
             this.btnQuitar.TabIndex = 4;
             this.btnQuitar.Text = "QUITAR";
             this.btnQuitar.UseVisualStyleBackColor = true;
@@ -113,9 +113,11 @@
             // 
             this.txtCategoria.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCategoria.Location = new System.Drawing.Point(6, 51);
+            this.txtCategoria.MaxLength = 10;
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(134, 25);
             this.txtCategoria.TabIndex = 1;
+            this.txtCategoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCategoria_KeyPress);
             // 
             // label1
             // 
@@ -131,11 +133,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(521, 203);
+            this.ClientSize = new System.Drawing.Size(560, 185);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lstCategorias);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAgregarCategorias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

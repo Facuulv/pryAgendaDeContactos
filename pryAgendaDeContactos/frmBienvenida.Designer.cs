@@ -91,6 +91,7 @@
             this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnIngresar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmBienvenida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bienvenido";

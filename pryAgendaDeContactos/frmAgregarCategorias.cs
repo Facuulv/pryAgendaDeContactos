@@ -72,5 +72,13 @@ namespace pryAgendaDeContactos
                 MessageBox.Show("No se ha seleccionado ninguna categoría para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void txtCategoria_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

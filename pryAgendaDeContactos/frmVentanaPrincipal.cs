@@ -153,7 +153,21 @@ namespace pryAgendaDeContactos
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult resultado = MessageBox.Show(
+                        "Se va a cerrar el programa. ¿Continúa?",
+                        "Salir",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                return;
+            }
+            
         }
     }
 }

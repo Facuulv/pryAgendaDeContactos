@@ -60,7 +60,11 @@ namespace pryAgendaDeContactos
 
         private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && 
+                !char.IsDigit(e.KeyChar) && e.KeyChar != '@' && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
@@ -91,6 +95,11 @@ namespace pryAgendaDeContactos
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

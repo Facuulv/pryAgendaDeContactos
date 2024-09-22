@@ -76,7 +76,7 @@
             // 
             // tpModificar
             // 
-            this.tpModificar.BackColor = System.Drawing.Color.Bisque;
+            this.tpModificar.BackColor = System.Drawing.Color.AntiqueWhite;
             this.tpModificar.Controls.Add(this.gbDatosContacto);
             this.tpModificar.Controls.Add(this.groupBox1);
             this.tpModificar.Location = new System.Drawing.Point(4, 26);
@@ -166,6 +166,7 @@
             // 
             // cmbCategoria
             // 
+            this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoria.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.Location = new System.Drawing.Point(79, 190);
@@ -187,9 +188,11 @@
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtCorreo.Location = new System.Drawing.Point(79, 151);
+            this.txtCorreo.MaxLength = 40;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(261, 25);
             this.txtCorreo.TabIndex = 7;
+            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
             // 
             // label6
             // 
@@ -205,9 +208,11 @@
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtTelefono.Location = new System.Drawing.Point(79, 112);
+            this.txtTelefono.MaxLength = 20;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(142, 25);
             this.txtTelefono.TabIndex = 5;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // label5
             // 
@@ -223,9 +228,11 @@
             // 
             this.txtApellido.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtApellido.Location = new System.Drawing.Point(79, 72);
+            this.txtApellido.MaxLength = 20;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(142, 25);
             this.txtApellido.TabIndex = 3;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // label4
             // 
@@ -241,9 +248,11 @@
             // 
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtNombre.Location = new System.Drawing.Point(79, 33);
+            this.txtNombre.MaxLength = 20;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(142, 25);
             this.txtNombre.TabIndex = 1;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // label3
             // 
@@ -292,6 +301,7 @@
             // 
             // cmbCategorias
             // 
+            this.cmbCategorias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategorias.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cmbCategorias.FormattingEnabled = true;
             this.cmbCategorias.Location = new System.Drawing.Point(19, 44);
@@ -314,7 +324,7 @@
             // 
             // tpEliminar
             // 
-            this.tpEliminar.BackColor = System.Drawing.Color.Bisque;
+            this.tpEliminar.BackColor = System.Drawing.Color.AntiqueWhite;
             this.tpEliminar.Controls.Add(this.btnEliminar);
             this.tpEliminar.Controls.Add(this.dgvContactos);
             this.tpEliminar.Location = new System.Drawing.Point(4, 26);
@@ -354,6 +364,7 @@
             this.ClientSize = new System.Drawing.Size(607, 412);
             this.Controls.Add(this.tcContactos);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMyEContactos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

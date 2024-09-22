@@ -109,6 +109,9 @@ namespace pryAgendaDeContactos
                 string nombre = txtNombre.Text;
                 ObjBusqueda.BuscarContacto(dgvContactos, nombre);
                 AjustarCol();
+            } else
+            {
+                MessageBox.Show("El campo esta vacío. Debe colocar algun dato.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -120,6 +123,10 @@ namespace pryAgendaDeContactos
                 ObjBusqueda.BuscarContacto(dgvContactos, tel);
                 AjustarCol();
             }
+            else
+            {
+                MessageBox.Show("El campo esta vacío. Debe colocar algun dato.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnCorreo_Click(object sender, EventArgs e)
@@ -129,6 +136,19 @@ namespace pryAgendaDeContactos
                 string correo = txtCorreo.Text;
                 ObjBusqueda.BuscarContacto(dgvContactos, correo);
                 AjustarCol();
+            }
+            else
+            {
+                MessageBox.Show("El campo esta vacío. Debe colocar algun dato.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar)
+                && e.KeyChar != '@' && e.KeyChar != '.')
+            {
+                e.Handled = true;
             }
         }
     }
